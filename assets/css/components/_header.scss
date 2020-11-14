@@ -1,0 +1,51 @@
+.header {
+  min-height: 100vh;
+  background-image: url(../img/header-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header-inner {
+  align-items: center;
+}
+.header-subtitle {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.header-title {
+  font-family: "Circe-Bold", sans-serif;
+  font-size: 48px;
+  line-height: 55px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 12px;
+}
+.header-suptitle {
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  margin-bottom: 36px;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+}
+.header-contacts-text {
+  color: #fff;
+  display: inline-block;
+  margin-right: 15px;
+}
+.header-contacts-links {
+  height: 30px;
+  
+  svg{
+    transition: all 0.3s;
+    margin-right: 10px;
+  }
+  svg:hover path {
+    fill-opacity: 1;
+  }
+}

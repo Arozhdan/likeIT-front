@@ -1,0 +1,29 @@
+.plank{
+  padding: 25px 0;
+  background: linear-gradient(90deg, #FE8A6B 0.31%, #FB6138 58.57%, #EC5D36 98.55%);
+}
+.plank-inner{
+  align-items: center;
+}
+.plnak-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.plank-img{
+  img{
+    max-width: 100%;
+  }
+}
+.plnak-content-text{
+  color: #fff;
+}
+.plank-title{
+  font-family: 'Circe-Bold';
+  font-size: 32px;
+  letter-spacing: 0;
+  margin-bottom: 12px;
+}
+.plank-text{
+  max-width: 85%;
+}

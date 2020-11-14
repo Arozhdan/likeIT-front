@@ -1,0 +1,37 @@
+.nav {
+  padding: 22px 0;
+  font-family: 'Circe-Bold' , sans-serif;
+}
+.nav-links{
+  align-items: center;
+}
+.nav-link {
+  position: relative;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.2s;
+  padding: 10px 0;
+  &:hover {
+    color: #F98F6F;
+
+  }
+  &::after{
+    position: absolute;
+    display: block;
+    content: '';
+    width: 4px;
+    height: 1.2px;
+    background-color: transparent;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.7s;
+  }
+  &:hover::after{
+    background-color: #ffffff;
+    width: 100%;
+  }
+}

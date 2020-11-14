@@ -1,0 +1,55 @@
+.teachers {
+  padding: 100px 0;
+}
+.teachers-inner {
+  margin: 70px 0 100px;
+  justify-content: space-between;
+}
+.teachers-item {
+  padding: 15px 15px 32px 36px;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(157, 135, 195, 0.12);
+  border-radius: 20px;
+  max-width: 30%;
+  transition: all .5s;
+  &:hover{
+    transform: scale(.95);
+  }
+}
+.teachers-img {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.teachers-title {
+  font-family: Circe;
+  font-family: "Circe-Bold";
+  font-size: 27px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  max-width: 80%;
+  color: #232323;
+  margin-bottom: 15px;
+}
+.teachers-text {
+  font-size: 20px;
+  font-family: "Circe-Light";
+  line-height: 28px;
+  color: rgba(85, 85, 85, 0.9);
+}
+.teachers-plank{
+  background: linear-gradient(225deg, #60CFE6 0%, #19ADCB 100%);
+}
+.teachers-plank-inner {
+  padding: 50px;
+  justify-content: space-between;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+.teachers-plank-title {
+  font-family: 'Circe-Bold';
+  font-size: 45px;
+  line-height: 55px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}

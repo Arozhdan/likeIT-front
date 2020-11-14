@@ -1,0 +1,64 @@
+.btn {
+  position: relative;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-weight: 800;
+  font-size: 17px;
+  transition: all 0.8s;
+  font-family: "Circe-Bold", sans-serif;
+
+  background: rgb(254, 138, 107);
+  background: linear-gradient(
+    38deg,
+    rgba(254, 138, 107, 1) 0%,
+    rgba(251, 97, 56, 1) 69%,
+    rgba(236, 54, 67, 1) 100%
+  );
+  border-radius: 25px;
+  color: #ffffff;
+  padding: 11px 30px;
+  &__header {
+    padding: 15px 40px;
+    margin-bottom: 100px;
+  }
+  &__secondary {
+    background: #57cbe2;
+  }
+  &__plank {
+    background: linear-gradient(45deg, #44a85f 0%, #48d16e 100%);
+    border-radius: 45px;
+  }
+  &:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+    transition: all 0.4s ease 0s;
+  }
+}
+.section-title {
+  text-align: center;
+  font-family: "Circe-Bold", sans-serif;
+  font-size: 40px;
+  line-height: 55px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+.section-suptitle {
+  text-align: center;
+  color: #555555;
+  max-width: 70%;
+  margin: 11px auto;
+  letter-spacing: 0;
+}
+.secondary-title {
+  font-family: "Circe-Bold", sans-serif;
+  font-size: 40px;
+  line-height: 55px;
+  margin-bottom: 10px;
+  padding-left: 70px;
+  color: #232323;
+  &__wellcome {
+    font-size: 32px;
+    padding-left: 0;
+  }
+}

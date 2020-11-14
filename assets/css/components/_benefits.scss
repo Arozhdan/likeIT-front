@@ -1,0 +1,28 @@
+.benefits{
+  padding: 90px 0 0;
+}
+.benefits-inner{
+  margin-top: 100px;
+}
+.benefits-item{
+  display: flex;
+  padding-right: 60px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 85px;
+}
+.benefits-item-left{
+  width: 60%;
+}
+.benefits-item-title{
+  font-family: 'Circe-Bold',sans-serif;
+  font-size: 27px;
+  letter-spacing: 0.02em;
+  color: #232323;
+  margin-bottom: 10px;
+}
+.benefits-item-text{
+  font-size: 20px;
+  line-height: 28px;
+  color: #555555;
+}

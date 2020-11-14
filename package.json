@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.1-rc.4",
+    "apollo-cache-inmemory": "^1.6.6",
+    "core-js": "^3.6.5",
+    "graphql": "^15.4.0",
+    "nuxt": "^2.14.6",
+    "swiper": "5.x",
+    "vue-awesome-swiper": "^4.1.1"
+  },
+  "devDependencies": {
+    "fibers": "^5.0.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0"
+  }
+}
