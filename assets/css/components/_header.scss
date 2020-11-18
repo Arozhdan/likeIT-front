@@ -1,8 +1,17 @@
 .header {
   min-height: 100vh;
-  background-image: url(../img/header-bg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(248.11deg, #917AB8 1.97%, #7760A2 100%)  ;
+  .header-body.container{
+   top: 100px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+.header-parallax{
+  overflow: visible;
+  
 }
 .header-inner {
   align-items: center;

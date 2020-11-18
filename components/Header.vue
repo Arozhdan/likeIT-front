@@ -1,7 +1,10 @@
 <template>
   <header class="header">
     <Nav />
-    <div class="container">
+    <div id="header-parallax" class="header-parallax">
+      <img data-depth="0.9" src="../assets/img/header-details.svg" alt="" />
+    </div>
+    <div style="z-index: 1500" class="header-body container">
       <div class="header-inner row">
         <div class="header-contnent col-md-7">
           <span class="header-subtitle"
@@ -88,11 +91,33 @@
     </div>
   </header>
 </template>
+
 <script>
 import Nav from "@/components/Nav.vue";
+import Parallax from "parallax-js";
 export default {
   components: {
     Nav,
   },
+  mounted() {
+    var scene = document.getElementById("header-parallax");
+    var parallaxInstance = new Parallax(scene);
+  },
 };
 </script>
+<style lang="scss">
+.header-subtitle {
+  animation: type 3s steps(70);
+  overflow: hidden;
+  animation-delay: 1s;
+  white-space: nowrap;
+}
+@keyframes type {
+  0% {
+    max-width: 0ch;
+  }
+  100% {
+    max-width: 70ch;
+  }
+}
+</style>

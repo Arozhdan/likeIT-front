@@ -76,7 +76,7 @@
 
           <div class="why-inner-left">
             <h3 class="why-inner-left-top">Самостоятельно</h3>
-            <h2 class="why-inner-left-title">с чего начать</h2>
+            <h2 class="why-inner-left-title">Сложно</h2>
             <p class="why-inner-left-text">
               Тут нужно что-нибудь классное написать побольше о том. что за
               ступени отбора такие.

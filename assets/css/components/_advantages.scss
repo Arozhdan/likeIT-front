@@ -5,6 +5,11 @@
   padding: 30px 20px;
   text-align: center;
   color: #fff;
+  &:hover{
+    .advantage-item-icon{
+      transform: scale(1.1);
+    }
+  }
   &:nth-of-type(1) {
     background: rgb(97, 213, 129);
     background: linear-gradient(
@@ -49,6 +54,7 @@
     rgba(255, 251, 252, 0.4) 0%,
     rgba(255, 251, 252, 0.2) 100%
   );
+  transition: all 0.2s;
   display: flex;
   justify-content: center;
   align-items: center;
