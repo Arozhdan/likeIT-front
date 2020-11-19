@@ -7,13 +7,13 @@
           <div class="header-contnent col-md-7">
             <span class="header-subtitle">Базовый</span>
             <h1 class="header-title">
-              Графический Дизайн
-              <span class="services-top-right header-title-span">от 9 лет</span>
+              {{ programs[0].name }}
+              <span class="services-top-right header-title-span"
+                >от {{ programs[0].age.num }} лет</span
+              >
             </h1>
             <p class="header-suptitle">
-              Данный курс содержит базовые знания о графике и композиции
-              {{ $route.params.slug || "null" }} ||
-              {{ $route.params.id || "null" }}
+              {{ programs[0].description }}
             </p>
             <button class="btn btn__header">Получить консультацию</button>
             <button class="btn btn__header">Начать учиться</button>
@@ -422,21 +422,20 @@ import Pricing from "@/components/Pricing.vue";
 import Footer from "@/components/Footer.vue";
 import Nav from "@/components/Nav.vue";
 export default {
-  // data() {
-  //   return {
-  //     program: {},
-  //     api_url: process.env.strapiBaseUri,
-  //   };
-  // },
-  // apollo: {
-  //   program: {
-  //     prefetch: true,
-  //     query: programQuery,
-  //     variables() {
-  //       return { slug: parseInt(this.$route.params.slug) };
-  //     },
-  //   },
-  // },
+  data() {
+    return {
+      api_url: process.env.strapiBaseUri,
+    };
+  },
+  apollo: {
+    programs: {
+      prefetch: true,
+      query: programQuery,
+      variables() {
+        return { slug: this.$route.params.slug };
+      },
+    },
+  },
   components: {
     Nav,
     Testimonials,

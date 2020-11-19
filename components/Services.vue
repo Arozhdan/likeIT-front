@@ -26,9 +26,7 @@
             </p>
             <nuxt-link
               tag="button"
-              :to="{
-                params: { id: program.id }
-              }"
+              :to="'/programs/' + program.slug"
               class="btn btn__services btn__services__1"
             >
               Подробнее

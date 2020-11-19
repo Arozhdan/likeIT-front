@@ -1,12 +1,10 @@
+
 query Programs($slug: String!) {
-  programs(slug: $slug) {
+  programs(where: {slug: $slug}) {
     id
+    slug
     name
     description
-    slug
-    category{
-      name
-    }
     age{
       num
     }
