@@ -5,55 +5,87 @@
   margin-top: 60px;
   justify-content: space-between;
 }
-.services-item-persp{
+.services-item-persp {
   perspective: 1000px;
   transform-style: preserve-3d;
+  border-radius: 20px;
   margin-bottom: 60px;
+}
+.services-item-persp {
+  &:nth-of-type(1) {
+    .services-item {
+      background: rgb(1, 208, 251);
+      background: linear-gradient(
+        220deg,
+        rgba(1, 208, 251, 1) 0%,
+        rgba(38, 166, 254, 1) 68%,
+        rgba(1, 130, 252, 1) 100%
+      );
+    }
+    .btn__services {
+      color: #0182fc;
+    }
+  }
+  &:nth-of-type(2) {
+    .services-item {
+      background: linear-gradient(
+        90deg,
+        #fe8a6b 0.31%,
+        #fb6138 58.57%,
+        #ec5d36 98.55%
+      );
+    }
+    .btn__services {
+      color: #ef5e37;
+    }
+  }
+  &:nth-of-type(3) {
+    .services-item {
+      background: linear-gradient(45deg, #44a85f 0%, #48d16e 100%);
+    }
+    .btn__services {
+      color: #44ab61;
+    }
+  }
+  &:nth-of-type(4) {
+    .services-item {
+      background: linear-gradient(237.11deg, #bb6bd9 3.48%, #a752c7 100%);
+    }
+    .btn__services {
+      color: #a955c9;
+    }
+  }
+  &:nth-of-type(5) {
+    .services-item {
+      background: linear-gradient(239.98deg, #967fbc 0%, #745c9f 97.99%);
+    }
+    .btn__services {
+      color: #765ea1;
+    }
+  }
+  &:nth-of-type(6) {
+    .services-item {
+      background: linear-gradient(
+        237.2deg,
+        #929cff 0%,
+        #737ff1 59.3%,
+        #6f79df 100%
+      );
+    }
+    .btn__services {
+      color: #707be4;
+    }
+  }
 }
 .services-item {
   user-select: none;
-
-  transition: transform .6s;
+  transition: transform 0.6s;
   max-width: 360px;
   text-align: center;
   letter-spacing: 0.02em;
   color: #fff;
   padding: 20px;
   border-radius: 20px;
-  &__1 {
-    background: rgb(1, 208, 251);
-    background: linear-gradient(
-      220deg,
-      rgba(1, 208, 251, 1) 0%,
-      rgba(38, 166, 254, 1) 68%,
-      rgba(1, 130, 252, 1) 100%
-    );
-  }
-  &__2 {
-    background: linear-gradient(
-      90deg,
-      #fe8a6b 0.31%,
-      #fb6138 58.57%,
-      #ec5d36 98.55%
-    );
-  }
-  &__3 {
-    background: linear-gradient(45deg, #44a85f 0%, #48d16e 100%);
-  }
-  &__4 {
-    background: linear-gradient(237.11deg, #bb6bd9 3.48%, #a752c7 100%);
-  }
-  &__5 {
-    background: linear-gradient(239.98deg, #967fbc 0%, #745c9f 97.99%);
-  }
-  &__6 {
-    background: linear-gradient(
-      237.2deg,
-      #929cff 0%,
-      #737ff1 59.3%,
-      #6f79df 100%
-    );
-  }
 }
 .services-item-top {
   display: flex;
@@ -92,23 +124,5 @@
   padding: 10px 50px;
   &:hover {
     text-shadow: 0px 0px 6px #a8cfc9;
-  }
-  &__1 {
-    color: #0182fc;
-  }
-  &__2 {
-    color: #ef5e37;
-  }
-  &__3 {
-    color: #44ab61;
-  }
-  &__4 {
-    color: #A955C9;
-  }
-  &__5 {
-    color: #765EA1;
-  }
-  &__6 {
-    color: #707BE4;
   }
 }

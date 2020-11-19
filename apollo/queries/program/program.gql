@@ -1,5 +1,5 @@
-query Programs {
-  programs {
+query Programs($slug: String!) {
+  programs(slug: $slug) {
     id
     name
     description

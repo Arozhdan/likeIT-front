@@ -12,6 +12,8 @@
             </h1>
             <p class="header-suptitle">
               Данный курс содержит базовые знания о графике и композиции
+              {{ $route.params.slug || "null" }} ||
+              {{ $route.params.id || "null" }}
             </p>
             <button class="btn btn__header">Получить консультацию</button>
             <button class="btn btn__header">Начать учиться</button>
@@ -95,24 +97,26 @@
             <h3 class="plan-section-title">Графический Дизайн. Базовый</h3>
             <div class="plan-section">
               <table class="plan-table">
-                <tr class="plan-row">
-                  <td class="plan-name">Графический Дизайн. Базовый</td>
-                  <td class="plan-home">-</td>
-                  <td class="plan-seminar">1 практика</td>
-                  <td class="plan-lesson">1 урок</td>
-                </tr>
-                <tr class="plan-row">
-                  <td class="plan-name">Графический Дизайн. Базовый</td>
-                  <td class="plan-home">2 ДЗ</td>
-                  <td class="plan-seminar">1 практика</td>
-                  <td class="plan-lesson">1 урок</td>
-                </tr>
-                <tr class="plan-row">
-                  <td class="plan-name">Графический Дизайн. Базовый</td>
-                  <td class="plan-home">5 ДЗ</td>
-                  <td class="plan-seminar">1 практика</td>
-                  <td class="plan-lesson">1 урок</td>
-                </tr>
+                <tbody>
+                  <tr class="plan-row">
+                    <td class="plan-name">Графический Дизайн. Базовый</td>
+                    <td class="plan-home">-</td>
+                    <td class="plan-seminar">1 практика</td>
+                    <td class="plan-lesson">1 урок</td>
+                  </tr>
+                  <tr class="plan-row">
+                    <td class="plan-name">Графический Дизайн. Базовый</td>
+                    <td class="plan-home">2 ДЗ</td>
+                    <td class="plan-seminar">1 практика</td>
+                    <td class="plan-lesson">1 урок</td>
+                  </tr>
+                  <tr class="plan-row">
+                    <td class="plan-name">Графический Дизайн. Базовый</td>
+                    <td class="plan-home">5 ДЗ</td>
+                    <td class="plan-seminar">1 практика</td>
+                    <td class="plan-lesson">1 урок</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -121,24 +125,26 @@
             <h3 class="plan-section-title">Графический Дизайн. Продвинутый</h3>
             <div class="plan-section">
               <table class="plan-table">
-                <tr class="plan-row">
-                  <td class="plan-name">Графический Дизайн. Базовый</td>
-                  <td class="plan-home">-</td>
-                  <td class="plan-seminar">1 практика</td>
-                  <td class="plan-lesson">1 урок</td>
-                </tr>
-                <tr class="plan-row">
-                  <td class="plan-name">Графический Дизайн. Базовый</td>
-                  <td class="plan-home">3 ДЗ</td>
-                  <td class="plan-seminar">2 практика</td>
-                  <td class="plan-lesson">15 урок</td>
-                </tr>
-                <tr class="plan-row">
-                  <td class="plan-name">Графический Дизайн. Базовый</td>
-                  <td class="plan-home">2 ДЗ</td>
-                  <td class="plan-seminar">12 практика</td>
-                  <td class="plan-lesson">11 урок</td>
-                </tr>
+                <tbody>
+                  <tr class="plan-row">
+                    <td class="plan-name">Графический Дизайн. Базовый</td>
+                    <td class="plan-home">-</td>
+                    <td class="plan-seminar">1 практика</td>
+                    <td class="plan-lesson">1 урок</td>
+                  </tr>
+                  <tr class="plan-row">
+                    <td class="plan-name">Графический Дизайн. Базовый</td>
+                    <td class="plan-home">3 ДЗ</td>
+                    <td class="plan-seminar">2 практика</td>
+                    <td class="plan-lesson">15 урок</td>
+                  </tr>
+                  <tr class="plan-row">
+                    <td class="plan-name">Графический Дизайн. Базовый</td>
+                    <td class="plan-home">2 ДЗ</td>
+                    <td class="plan-seminar">12 практика</td>
+                    <td class="plan-lesson">11 урок</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
@@ -152,7 +158,7 @@
           <div class="col-md-4">
             <div class="program-expect-item">
               <div class="program-expect-item-img">
-                <img src="../assets/img/time.svg" alt="" />
+                <img src="../../assets/img/time.svg" alt="" />
               </div>
               <h4 class="program-expect-item-title">24 уроков</h4>
               <h4 class="program-expect-item-suptitle">
@@ -163,7 +169,7 @@
           <div class="col-md-4">
             <div class="program-expect-item">
               <div class="program-expect-item-img">
-                <img src="../assets/img/book.svg" alt="" />
+                <img src="../../assets/img/book.svg" alt="" />
               </div>
               <h4 class="program-expect-item-title">24 уроков</h4>
               <h4 class="program-expect-item-suptitle">
@@ -175,7 +181,7 @@
           <div class="col-md-4">
             <div class="program-expect-item">
               <div class="program-expect-item-img">
-                <img src="../assets/img/scheme.svg" alt="" />
+                <img src="../../assets/img/scheme.svg" alt="" />
               </div>
               <h4 class="program-expect-item-title">24 уроков</h4>
               <h4 class="program-expect-item-suptitle">
@@ -198,7 +204,7 @@
           <div class="col-md-3">
             <div class="whom-item">
               <div class="whom-item-img">
-                <img src="../assets/img/set.svg" alt="" />
+                <img src="../../assets/img/set.svg" alt="" />
               </div>
               <p class="whom-item-paragraph">
                 Для тех, кто хочет развивать креативность
@@ -208,7 +214,7 @@
           <div class="col-md-3">
             <div class="whom-item">
               <div class="whom-item-img">
-                <img src="../assets/img/star.svg" alt="" />
+                <img src="../../assets/img/star.svg" alt="" />
               </div>
               <p class="whom-item-paragraph">
                 Для тех, кто хочет развивать креативность
@@ -218,7 +224,7 @@
           <div class="col-md-3">
             <div class="whom-item">
               <div class="whom-item-img">
-                <img src="../assets/img/suit.svg" alt="" />
+                <img src="../../assets/img/suit.svg" alt="" />
               </div>
               <p class="whom-item-paragraph">
                 Для тех, кто хочет развивать креативность
@@ -228,7 +234,7 @@
           <div class="col-md-3">
             <div class="whom-item">
               <div class="whom-item-img">
-                <img src="../assets/img/set.svg" alt="" />
+                <img src="../../assets/img/set.svg" alt="" />
               </div>
               <p class="whom-item-paragraph">
                 Для тех, кто хочет развивать креативность
@@ -240,7 +246,7 @@
     </section>
     <section class="you-get">
       <div class="you-get-img">
-        <img src="../assets/img/cookie.png" alt="" />
+        <img src="../../assets/img/cookie.png" alt="" />
       </div>
       <div class="container">
         <h2 class="section-title">что вы получаете?</h2>
@@ -314,7 +320,7 @@
           <div class="col-md-3">
             <div class="process-item">
               <div class="process-item-img">
-                <img src="../assets/img/n1.svg" alt="" />
+                <img src="../../assets/img/n1.svg" alt="" />
               </div>
               <h4 class="process-item-title">
                 Вводная лекция с преподавателем
@@ -327,7 +333,7 @@
           <div class="col-md-3">
             <div class="process-item">
               <div class="process-item-img">
-                <img src="../assets/img/n2.svg" alt="" />
+                <img src="../../assets/img/n2.svg" alt="" />
               </div>
               <h4 class="process-item-title">Самостоятельные практики и ДЗ</h4>
               <p class="process-item-text">
@@ -338,7 +344,7 @@
           <div class="col-md-3">
             <div class="process-item">
               <div class="process-item-img">
-                <img src="../assets/img/n3.svg" alt="" />
+                <img src="../../assets/img/n3.svg" alt="" />
               </div>
               <h4 class="process-item-title">Разбор ошибок и портфолио</h4>
               <p class="process-item-text">
@@ -349,7 +355,7 @@
           <div class="col-md-3">
             <div class="process-item">
               <div class="process-item-img">
-                <img src="../assets/img/n4.svg" alt="" />
+                <img src="../../assets/img/n4.svg" alt="" />
               </div>
               <h4 class="process-item-title">
                 Вводная лекция с преподавателем
@@ -389,7 +395,7 @@
           </div>
           <div class="contact-right">
             <div class="contact-right-img">
-              <img src="../assets/img/call.svg" alt="" />
+              <img src="../../assets/img/call.svg" alt="" />
             </div>
             <h3 class="contact-right-title">
               Начните свой путь в LikeIT уже сегодня!
@@ -410,11 +416,27 @@
   </div>
 </template>
 <script>
+import programQuery from "../../apollo/queries/program/program.gql";
 import Testimonials from "@/components/Testimonials.vue";
 import Pricing from "@/components/Pricing.vue";
 import Footer from "@/components/Footer.vue";
 import Nav from "@/components/Nav.vue";
 export default {
+  // data() {
+  //   return {
+  //     program: {},
+  //     api_url: process.env.strapiBaseUri,
+  //   };
+  // },
+  // apollo: {
+  //   program: {
+  //     prefetch: true,
+  //     query: programQuery,
+  //     variables() {
+  //       return { slug: parseInt(this.$route.params.slug) };
+  //     },
+  //   },
+  // },
   components: {
     Nav,
     Testimonials,
