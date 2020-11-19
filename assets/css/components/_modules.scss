@@ -7,26 +7,28 @@
   font-size: 17px;
   transition: all 0.8s;
   font-family: "Circe-Bold", sans-serif;
-
-  background: rgb(254, 138, 107);
   background: linear-gradient(
-    38deg,
-    rgba(254, 138, 107, 1) 0%,
-    rgba(251, 97, 56, 1) 69%,
-    rgba(236, 54, 67, 1) 100%
+    180deg,
+    #fe8a6b -23%,
+    #fc7b58 38.5%,
+    #ec5d36 100%
   );
-  border-radius: 25px;
+  border-radius: 45px;
   color: #ffffff;
-  padding: 11px 30px;
+  padding: 11px 60px;
   &__header {
-    padding: 15px 40px;
+    padding: 10px 50px;
     margin-bottom: 100px;
+  }
+  &__nav{
+    padding: 11px 35px;
   }
   &__secondary {
     background: #57cbe2;
   }
   &__plank {
     background: linear-gradient(45deg, #44a85f 0%, #48d16e 100%);
+    padding: 11px 35px;
     border-radius: 45px;
   }
   &__submit {
@@ -35,7 +37,11 @@
     letter-spacing: 0.02em;
     width: 100%;
     padding: 15px 0;
-    background: linear-gradient(225deg, #69D2E7 0%, #1CB3D1 100%);
+    background: linear-gradient(225deg, #69d2e7 0%, #1cb3d1 100%);
+  }
+  &__thanks {
+    padding: 16px 110px;
+    background: linear-gradient(248.11deg, #917ab8 1.97%, #7760a2 100%);
   }
   &:hover {
     cursor: pointer;

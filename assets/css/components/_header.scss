@@ -1,17 +1,16 @@
 .header {
   min-height: 100vh;
-  background: linear-gradient(248.11deg, #917AB8 1.97%, #7760A2 100%)  ;
-  .header-body.container{
-   top: 100px;
+  background: linear-gradient(248.11deg, #917ab8 1.97%, #7760a2 100%);
+  .header-body.container {
+    top: 100px;
     margin: 0 auto;
     right: 0;
     left: 0;
     position: absolute;
   }
 }
-.header-parallax{
+.header-parallax {
   overflow: visible;
-  
 }
 .header-inner {
   align-items: center;
@@ -21,10 +20,11 @@
   text-transform: uppercase;
   color: #fff;
   display: inline-block;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .header-title {
   font-family: "Circe-Bold", sans-serif;
+  text-transform: capitalize;
   font-size: 48px;
   line-height: 55px;
   letter-spacing: 0.02em;
@@ -34,8 +34,8 @@
 .header-suptitle {
   color: #fff;
   font-size: 24px;
-  letter-spacing: 0.02em;
   margin-bottom: 36px;
+  letter-spacing: 0;
 }
 
 .header-contacts {
@@ -49,8 +49,8 @@
 }
 .header-contacts-links {
   height: 30px;
-  
-  svg{
+
+  svg {
     transition: all 0.3s;
     margin-right: 10px;
   }

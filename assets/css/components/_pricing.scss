@@ -60,6 +60,7 @@
   color: #555555;
   font-family: "Circe-Light";
   font-size: 14px;
+  line-height: 18px;
 }
 .price-card-body-list-item {
   padding-left: 20px;
@@ -76,7 +77,7 @@
     border-radius: 50%;
   }
   + .price-card-body-list-item {
-    margin-top: 10px;
+    margin-top: 20px;
   }
 }
 .pricing .btn-wrapper {

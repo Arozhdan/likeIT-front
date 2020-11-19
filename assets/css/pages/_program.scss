@@ -1,0 +1,237 @@
+.program-header {
+  background-image: url(../img/prog-bg.jpg);
+  padding-bottom: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  button.btn__header {
+    background: transparent;
+    border: 2px solid #fff;
+    + .btn__header {
+      margin-left: 15px;
+    }
+    &:hover {
+      background-color: #fff;
+      color: #20b5d2;
+    }
+  }
+}
+
+.plan {
+  padding: 80px 0;
+  .section-title {
+    padding: 0;
+    margin-bottom: 35px;
+  }
+}
+.plan-inner {
+  width: 90%;
+  margin: 0 auto;
+  background: #ffffff;
+  box-shadow: 0px 3px 5px rgba(157, 135, 195, 0.1);
+  border-radius: 20px;
+  padding: 35px 0;
+}
+.plan-section {
+  padding: 0 65px;
+}
+.plan-section-title {
+  padding: 21px 0;
+  padding-left: 45px;
+  font-size: 27px;
+  line-height: 32px;
+  font-family: "Circe-Bold";
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #232323;
+
+  background: linear-gradient(
+    270deg,
+    rgba(189, 128, 225, 0) 0%,
+    rgba(189, 128, 225, 0.2) 100%
+  );
+}
+.plan-table {
+  width: 100%;
+  .plan-home,
+  .plan-seminar,
+  .plan-lesson {
+    width: 21%;
+    text-align: center;
+  }
+  .plan-name {
+    width: 35%;
+    letter-spacing: 0;
+  }
+  .plan-home {
+    font-size: 20px;
+    line-height: 28px;
+    color: #c4c4c4;
+  }
+  .plan-seminar {
+    font-size: 20px;
+    line-height: 28px;
+    color: #c4c4c4;
+    letter-spacing: 0;
+  }
+  .plan-lesson {
+    font-family: "Circe-Bold";
+    font-size: 20px;
+    line-height: 28px;
+    text-align: right;
+    color: #9d87c3;
+    letter-spacing: 0;
+  }
+}
+.plan-row {
+  display: flex;
+  padding: 13px 0;
+  &:hover {
+    padding: 13px 10px;
+    background-color: rgba(255, 159, 159, 0.041);
+    box-shadow: -10px 10px 15px rgba(255, 180, 180, 0.185);
+  }
+}
+.program-expect-inner {
+  margin: 90px 0 160px;
+}
+.program-expect-item {
+  padding: 24px 32px;
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(157, 135, 195, 0.12);
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.program-expect-item-img {
+  margin-bottom: 10px;
+}
+.program-expect-item-title {
+  font-family: "Circe-Bold";
+  font-size: 32px;
+  line-height: 55px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #232323;
+}
+.program-expect-item-suptitle {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  font-family: "Circe-Light";
+  letter-spacing: 0;
+  color: rgba(85, 85, 85, 0.9);
+}
+
+.for-whom {
+  padding: 120px 0;
+  background-color: #fff;
+}
+.whom-item {
+  text-align: center;
+}
+.whom-inner {
+  margin-top: 90px;
+}
+.you-get {
+  background: #f0fbfd;
+  padding: 95px 0 170px;
+  position: relative;
+}
+.you-get-inner-first {
+  justify-content: center;
+  margin-top: 56px;
+  margin-bottom: 75px;
+  .col-md-4 + .col-md-4{
+    margin-left: 5%;
+  }
+}
+.you-get-item {
+  background: #ffffff;
+  box-shadow: 0px 2px 15px rgba(157, 135, 195, 0.12);
+  border-radius: 20px;
+  padding-bottom: 47px;
+  overflow: hidden;
+  transition: all 0.4s;
+  &:hover {
+    transform: translate(-2px, -5px);
+  }
+}
+.you-get-item-top {
+  height: 30px;
+  &__1 {
+    background: linear-gradient(180deg, #ffe177 0%, #feb137 100%);
+  }
+  &__2 {
+    background: linear-gradient(222.59deg, #61d581 -2.46%, #45ae62 100%);
+  }
+  &__3 {
+    background: linear-gradient(
+      237.2deg,
+      #929cff 0%,
+      #737ff1 59.3%,
+      #6f79df 100%
+    );
+  }
+  &__4 {
+    background: linear-gradient(
+      90deg,
+      #fe8a6b 0.31%,
+      #fb6138 58.57%,
+      #ec5d36 98.55%
+    );
+  }
+}
+.you-get-item-title {
+  padding: 0 32px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  font-size: 27px;
+  font-family: "Circe-Bold";
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #232323;
+}
+.you-get-item-suptitle {
+  padding: 0 32px;
+  font-size: 20px;
+  line-height: 28px;
+  color: rgba(85, 85, 85, 0.9);
+  font-family: "Circe-Light";
+  letter-spacing: 0;
+}
+.you-get-inner-second {
+  justify-content: space-between;
+}
+.you-get-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-40%, 20%);
+}
+.process {
+  padding: 180px 0;
+  background-color: #fff;
+  margin-bottom: 80px;
+}
+.process-inner {
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.process-item-title {
+  font-family: "Circe-Bold";
+  margin: 23px 0 10px;
+  font-size: 27px;
+  line-height: 32px;
+  color: #232323;
+}
+.process-item-text {
+  font-size: 20px;
+  color: #555555;
+}

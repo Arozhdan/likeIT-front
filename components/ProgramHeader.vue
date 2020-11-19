@@ -1,22 +1,19 @@
 <template>
-  <header class="header">
-    <Nav />
-    <div id="header-parallax" class="header-parallax">
-      <img data-depth="0.9" src="../assets/img/header-details.svg" alt="" />
-    </div>
-    <div style="z-index: 1500" class="header-body container">
+  <header class="program-header">
+    <Nav class="program-nav"/>
+     <div style="z-index: 1500" class="header-body container">
       <div class="header-inner row">
         <div class="header-contnent col-md-7">
           <span class="header-subtitle"
-            >онлайн-школа информационных технологий</span
+            >Базовый</span
           >
           <h1 class="header-title">
-            Пусть ваш ребенок проведет время с пользой 
+            Графический Дизайн <span class="services-top-right header-title-span">от 9 лет</span>
           </h1>
           <p class="header-suptitle">
-            Постройте своё, удобное для вас, расписание. <br> Больше не нужно
-            подстраиваться под уроки!
+           Данный курс содержит базовые знания о графике и композиции 
           </p>
+          <button class="btn btn__header">Получить консультацию</button>
           <button class="btn btn__header">Начать учиться</button>
           <div class="header-contacts">
             <span class="header-contacts-text">LikeIT school в соц. сетях</span>
@@ -85,39 +82,18 @@
           </div>
         </div>
         <div class="header-img col-md-5">
-          <img src="../assets/img/header-cookie.png" alt="" />
         </div>
       </div>
     </div>
   </header>
 </template>
-
 <script>
 import Nav from "@/components/Nav.vue";
-import Parallax from "parallax-js";
+
 export default {
-  components: {
-    Nav,
-  },
-  mounted() {
-    var scene = document.getElementById("header-parallax");
-    var parallaxInstance = new Parallax(scene);
-  },
-};
+  components:{
+    Nav
+  }
+  
+}
 </script>
-<style lang="scss">
-.header-subtitle {
-  animation: type 3s steps(70);
-  overflow: hidden;
-  animation-delay: 1s;
-  white-space: nowrap;
-}
-@keyframes type {
-  0% {
-    max-width: 0ch;
-  }
-  100% {
-    max-width: 70ch;
-  }
-}
-</style>

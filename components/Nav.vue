@@ -3,11 +3,11 @@
   <nav class="nav">
     <div class="container">
       <div class="row justify-content-between nav-wrapper">
-        <div class="logo col-md-2">
-          <img src="../assets/img/logo.svg" alt="">
-        </div>
-       <div class="nav-links col-md-9 row justify-content-between">
-          <a href="#" class="nav-link">Главная</a>
+        <nuxt-link class="logo col-md-2" to="/" tag="div">
+          <img src="../assets/img/logo.svg" alt="" />
+        </nuxt-link>
+        <div class="nav-links col-md-9 row justify-content-between">
+          <nuxt-link tag="a" to="/" class="nav-link"> Главная</nuxt-link>
           <a href="#" class="nav-link">О Нас</a>
           <a href="#" class="nav-link">Программы</a>
           <a href="#" class="nav-link">Тарифы</a>
@@ -18,6 +18,5 @@
         </div>
       </div>
     </div>
-    
   </nav>
 </template>

@@ -11,9 +11,9 @@
   box-shadow: 0px 2px 15px rgba(157, 135, 195, 0.12);
   border-radius: 20px;
   max-width: 30%;
-  transition: all .5s;
-  &:hover{
-    transform: scale(.95);
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(0.95);
   }
 }
 .teachers-img {
@@ -35,9 +35,10 @@
   font-family: "Circe-Light";
   line-height: 28px;
   color: rgba(85, 85, 85, 0.9);
+  letter-spacing: 0;
 }
-.teachers-plank{
-  background: linear-gradient(225deg, #60CFE6 0%, #19ADCB 100%);
+.teachers-plank {
+  background: linear-gradient(225deg, #60cfe6 0%, #19adcb 100%);
 }
 .teachers-plank-inner {
   padding: 50px;
@@ -47,7 +48,7 @@
   text-align: center;
 }
 .teachers-plank-title {
-  font-family: 'Circe-Bold';
+  font-family: "Circe-Bold";
   font-size: 45px;
   line-height: 55px;
   margin-bottom: 10px;

@@ -7,14 +7,13 @@
             <img src="../assets/img/logo.svg" alt="" />
           </div>
           <span class="header-subtitle footer-suptitle"
-            >онлайн-школа <br />
+            >Онлайн-школа <br />
             информационных технологий</span
           >
           <div class="footer-left-contacts">
-            <p>
-              +7 (961) 204 36 09 <br />
-              <span>по России бесплатно</span>
-            </p>
+            <p>+7 (961) 204 36 09</p>
+            <span>по России бесплатно</span>
+
             <div class="footer-left-contacts-hot">
               <img src="../assets/img/hot.svg" alt="" />
               <a class="footer-left-contacts-hot-link" href="#"
@@ -33,16 +32,17 @@
                   <img src="../assets/img/wp.svg" alt="telegram" />
                 </a>
                 <a href="#">
-                  <img src="../assets/img/inst.svg" alt="telegram" />
+                  <img src="../assets/img/vk.svg" alt="telegram" />
                 </a>
                 <a href="#">
-                  <img src="../assets/img/vk.svg" alt="telegram" />
+                  <img src="../assets/img/inst.svg" alt="telegram" />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer-center col-md-4">
+        <div class="footer-spacer col-md-2"></div>
+        <div class="footer-center col-md-5">
           <span class="footer-center-title">Программы</span>
           <div class="footer-center-items">
             <div class="footer-center-item">
@@ -69,12 +69,12 @@
           </div>
         </div>
         <ul class="footer-right col-md-2">
-          <li>Главная</li>
-          <li>О нас</li>
-          <li>Блог</li>
-          <li>Тарифы</li>
-          <li>Отзывы</li>
-          <li>FAQ</li>
+          <li><a href="">Главная</a></li>
+          <li><a href="">О нас</a></li>
+          <li><a href="">Блог</a></li>
+          <li><a href="">Тарифы</a></li>
+          <li><a href="">Отзывы</a></li>
+          <li><a href="">FAQ</a></li>
         </ul>
       </div>
     </div>
