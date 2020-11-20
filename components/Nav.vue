@@ -8,15 +8,31 @@
         </nuxt-link>
         <div class="nav-links col-md-9 row justify-content-between">
           <nuxt-link tag="a" to="/" class="nav-link"> Главная</nuxt-link>
-          <a href="#" class="nav-link">О Нас</a>
-          <a href="#" class="nav-link">Программы</a>
-          <a href="#" class="nav-link">Тарифы</a>
-          <a href="#" class="nav-link">Отзывы</a>
-          <a href="#" class="nav-link">FAQ</a>
-          <a href="#" class="nav-link">Контакты</a>
-          <button class="btn btn__nav">+7 (961) 204 36 09</button>
+          <nuxt-link tag="a" to="/#about" class="nav-link" >О Нас</nuxt-link>
+          <nuxt-link tag="a" to="/#programs" class="nav-link" >Программы</nuxt-link>
+          <nuxt-link tag="a" to="/#pricing" class="nav-link" >Тарифы</nuxt-link>
+          <nuxt-link tag="a" to="/#testimonials" class="nav-link" >Отзывы</nuxt-link>
+          <nuxt-link tag="a" to="/#contacts" class="nav-link" >Контакты</nuxt-link>
+          <nuxt-link tag="a" to="/#faq" class="nav-link" >FAQ</nuxt-link>
+          <a :href="'tel:'+links[0].phone" class="btn btn__nav">{{links[0].phone}}</a>
         </div>
       </div>
     </div>
   </nav>
 </template>
+<script>
+import linksQuery from "../apollo/queries/link/links.gql";
+export default {
+  data() {
+    return {
+      links: {},
+    };
+  },
+  apollo: {
+    links: {
+      prefetch: true,
+      query: linksQuery,
+    },
+  },
+}
+</script>

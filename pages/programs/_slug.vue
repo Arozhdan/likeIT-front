@@ -1,5 +1,5 @@
 <template>
-  <div class="program-page">
+  <div class="program-page" v-if="!$apollo.loading">
     <header class="program-header">
       <Nav class="program-nav" />
       <div style="z-index: 1500" class="header-body container">
@@ -414,6 +414,9 @@
     </section>
     <Footer />
   </div>
+  <div class="loader" v-else >
+    <h1>LOADING THE PAGE</h1>
+  </div>
 </template>
 <script>
 import programQuery from "../../apollo/queries/program/program.gql";
@@ -424,6 +427,7 @@ import Nav from "@/components/Nav.vue";
 export default {
   data() {
     return {
+      programs:{},
       api_url: process.env.strapiBaseUri,
     };
   },

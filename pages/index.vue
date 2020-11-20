@@ -1,4 +1,3 @@
-import { Plank, Teachers, Whyus, Contactus, Faq, Promo } from '../.nuxt/components';
 <template>
   <div class="home-page">
     <Header />
@@ -137,7 +136,7 @@ import { Plank, Teachers, Whyus, Contactus, Faq, Promo } from '../.nuxt/componen
         </div>
       </div>
     </div>
-    <section class="about">
+    <section id="about" class="about">
       <h2 class="section-title">О нас</h2>
       <p class="section-suptitle about-sup">
         В LikeIT school наша миссия состоит в том, чтобы обеспечить превосходное
@@ -151,7 +150,7 @@ import { Plank, Teachers, Whyus, Contactus, Faq, Promo } from '../.nuxt/componen
         мышлению.
       </p>
     </section>
-    <Services />
+    <Services id="programs" />
     <div class="plank">
       <div class="container">
         <div class="row plank-inner">
@@ -218,15 +217,15 @@ import { Plank, Teachers, Whyus, Contactus, Faq, Promo } from '../.nuxt/componen
         <div class="container">
           <div class="row teachers-plank-inner">
             <div class="col-md-3">
-              <h3 class="teachers-plank-title">100+</h3>
+              <h3 class="teachers-plank-title">{{ stats[0].graduates }}+</h3>
               <p class="teachers-plank-text">учеников прошли наши курсы</p>
             </div>
             <div class="col-md-3">
-              <h3 class="teachers-plank-title">8+</h3>
+              <h3 class="teachers-plank-title">{{ stats[0].programs }}+</h3>
               <p class="teachers-plank-text">различных учебных программ</p>
             </div>
             <div class="col-md-3">
-              <h3 class="teachers-plank-title">20+</h3>
+              <h3 class="teachers-plank-title">{{ stats[0].teachers }}+</h3>
               <p class="teachers-plank-text">
                 сертифицированных преподавателей
               </p>
@@ -236,9 +235,9 @@ import { Plank, Teachers, Whyus, Contactus, Faq, Promo } from '../.nuxt/componen
       </div>
     </section>
     <Whyus />
-    <Pricing />
-    <Testimonials />
-    <section class="contact">
+    <Pricing id="pricing" />
+    <Testimonials id="testimonials" />
+    <section id="contacts" class="contact">
       <div class="container">
         <div class="contact-inner">
           <div class="contact-left">
@@ -280,7 +279,7 @@ import { Plank, Teachers, Whyus, Contactus, Faq, Promo } from '../.nuxt/componen
         </div>
       </div>
     </section>
-    <Faq />
+    <Faq id="faq" />
     <div class="promo">
       <div class="container">
         <div class="row plank-inner">
@@ -317,7 +316,20 @@ import Faq from "@/components/Faq.vue";
 import Form from "@/components/Form.vue";
 import Footer from "@/components/Footer.vue";
 
+import statsQuery from "../apollo/queries/stat/stats.gql";
+
 export default {
+  data() {
+    return {
+      stats: {},
+    };
+  },
+  apollo: {
+    stats: {
+      prefetch: true,
+      query: statsQuery,
+    },
+  },
   components: {
     Header,
     Services,

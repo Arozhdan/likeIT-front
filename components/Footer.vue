@@ -3,9 +3,11 @@
     <div class="container">
       <div class="footer-inner row">
         <div class="footer-left col-md-3">
-          <div class="logo">
-            <img src="../assets/img/logo.svg" alt="" />
-          </div>
+          <nuxt-link to="/#">
+            <div class="logo">
+              <img src="../assets/img/logo.svg" alt="" />
+            </div>
+          </nuxt-link>
           <span class="header-subtitle footer-suptitle"
             >Онлайн-школа <br />
             информационных технологий</span

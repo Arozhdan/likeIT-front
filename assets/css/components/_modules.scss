@@ -21,7 +21,8 @@
     margin-bottom: 100px;
   }
   &__nav{
-    padding: 11px 35px;
+    padding: 6px 35px;
+    text-decoration: none;
   }
   &__secondary {
     background: #57cbe2;
@@ -75,4 +76,15 @@
     font-size: 32px;
     padding-left: 0;
   }
+}
+.loader{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 219, 219);
 }

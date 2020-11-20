@@ -9,12 +9,11 @@
       </p>
       <div class="faq-collapses">
         <v-collapse-group :onlyOneActive="false">
-          <div class="faq-collapse">
+          <div class="faq-collapse" v-for="faq in faqs" :key="faq.id">
             <v-collapse-wrapper>
               <div class="faq-item-header-wrapper" v-collapse-toggle>
                 <h4 class="faq-item-header">
-                  Как проходит обучение? Можно ли родителям присутствовать на
-                  вводном уроке?
+                  {{ faq.question }}
                 </h4>
               </div>
               <div
@@ -22,134 +21,7 @@
                 v-collapse-content
               >
                 <p class="faq-item-body-text">
-                  Тут всякие вещи умные напишем, на вопросы ответим, все
-                  расскажем так, чтобы понятно и ясно было даже ребенку. Надо
-                  нам для этого очень хорошо продумать концепцию!
-                </p>
-                <img
-                  src="../assets/img/down-arrow.svg"
-                  alt=""
-                  class="faq-collapse-img"
-                />
-              </div>
-            </v-collapse-wrapper>
-          </div>
-          <div class="faq-collapse">
-            <v-collapse-wrapper>
-              <div class="faq-item-header-wrapper" v-collapse-toggle>
-                <h4 class="faq-item-header">
-                  Как проходит обучение? Можно ли родителям присутствовать на
-                  вводном уроке?
-                </h4>
-              </div>
-              <div
-                class="faq-item-body v-collapse-content-end"
-                v-collapse-content
-              >
-                <p class="faq-item-body-text">
-                  Тут всякие вещи умные напишем, на вопросы ответим, все
-                  расскажем так, чтобы понятно и ясно было даже ребенку. Надо
-                  нам для этого очень хорошо продумать концепцию!
-                </p>
-                <img
-                  src="../assets/img/down-arrow.svg"
-                  alt=""
-                  class="faq-collapse-img"
-                />
-              </div>
-            </v-collapse-wrapper>
-          </div>
-          <div class="faq-collapse">
-            <v-collapse-wrapper>
-              <div class="faq-item-header-wrapper" v-collapse-toggle>
-                <h4 class="faq-item-header">
-                  Как проходит обучение? Можно ли родителям присутствовать на
-                  вводном уроке?
-                </h4>
-              </div>
-              <div
-                class="faq-item-body v-collapse-content-end"
-                v-collapse-content
-              >
-                <p class="faq-item-body-text">
-                  Тут всякие вещи умные напишем, на вопросы ответим, все
-                  расскажем так, чтобы понятно и ясно было даже ребенку. Надо
-                  нам для этого очень хорошо продумать концепцию!
-                </p>
-                <img
-                  src="../assets/img/down-arrow.svg"
-                  alt=""
-                  class="faq-collapse-img"
-                />
-              </div>
-            </v-collapse-wrapper>
-          </div>
-          <div class="faq-collapse">
-            <v-collapse-wrapper>
-              <div class="faq-item-header-wrapper" v-collapse-toggle>
-                <h4 class="faq-item-header">
-                  Как проходит обучение? Можно ли родителям присутствовать на
-                  вводном уроке?
-                </h4>
-              </div>
-              <div
-                class="faq-item-body v-collapse-content-end"
-                v-collapse-content
-              >
-                <p class="faq-item-body-text">
-                  Тут всякие вещи умные напишем, на вопросы ответим, все
-                  расскажем так, чтобы понятно и ясно было даже ребенку. Надо
-                  нам для этого очень хорошо продумать концепцию!
-                </p>
-                <img
-                  src="../assets/img/down-arrow.svg"
-                  alt=""
-                  class="faq-collapse-img"
-                />
-              </div>
-            </v-collapse-wrapper>
-          </div>
-          <div class="faq-collapse">
-            <v-collapse-wrapper>
-              <div class="faq-item-header-wrapper" v-collapse-toggle>
-                <h4 class="faq-item-header">
-                  Как проходит обучение? Можно ли родителям присутствовать на
-                  вводном уроке?
-                </h4>
-              </div>
-              <div
-                class="faq-item-body v-collapse-content-end"
-                v-collapse-content
-              >
-                <p class="faq-item-body-text">
-                  Тут всякие вещи умные напишем, на вопросы ответим, все
-                  расскажем так, чтобы понятно и ясно было даже ребенку. Надо
-                  нам для этого очень хорошо продумать концепцию!
-                </p>
-                <img
-                  src="../assets/img/down-arrow.svg"
-                  alt=""
-                  class="faq-collapse-img"
-                />
-              </div>
-            </v-collapse-wrapper>
-          </div>
-          <div class="faq-collapse">
-            <v-collapse-wrapper>
-              <div class="faq-item-header-wrapper" v-collapse-toggle>
-                <h4 class="faq-item-header">
-                  Как проходит обучение? Можно ли родителям присутствовать на
-                  вводном уроке?
-                </h4>
-              </div>
-              <div
-                class="faq-item-body v-collapse-content-end"
-                v-collapse-content
-              >
-                <p class="faq-item-body-text">
-                  Тут всякие вещи умные напишем, на вопросы ответим, все
-                  расскажем так, чтобы понятно и ясно было даже ребенку. Надо
-                  нам для этого очень хорошо продумать концепцию!
+                  {{ faq.answer }}
                 </p>
                 <img
                   src="../assets/img/down-arrow.svg"
@@ -165,7 +37,19 @@
   </section>
 </template>
 <script>
+import faqQuery from "../apollo/queries/faq/faq.gql";
 export default {
+  data() {
+    return {
+      faqs: {},
+    };
+  },
+  apollo: {
+    faqs: {
+      prefetch: true,
+      query: faqQuery,
+    },
+  },
   data: function () {
     return {};
   },

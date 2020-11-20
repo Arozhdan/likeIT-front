@@ -20,11 +20,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px 0;
+  padding: 16px 0 12px;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
   color: #fff;
   text-transform: uppercase;
+  span {
+    font-size: 20px;
+  }
 }
 .price-card-body {
   background-color: #fff;
@@ -98,17 +101,17 @@
   }
   .price-card-body-amount {
     color: #fff;
-    border-color: rgba($color: #fff, $alpha: .6);
+    border-color: rgba($color: #fff, $alpha: 0.6);
   }
-  .price-card-body-desc{
+  .price-card-body-desc {
     color: #fff;
   }
   .price-card-body-list {
     color: #fff;
     opacity: 0.9;
   }
-  .btn{
+  .btn {
     background: #fff;
-    color:#7962A3;
+    color: #7962a3;
   }
 }

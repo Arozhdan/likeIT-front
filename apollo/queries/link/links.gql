@@ -1,0 +1,11 @@
+query Links {
+  links {
+    id
+    instagram
+    telegram
+    whatsapp
+    vk
+    email
+    phone
+  }
+}

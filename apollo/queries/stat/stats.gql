@@ -1,0 +1,8 @@
+query Stats {
+  stats {
+    id
+    graduates
+    programs
+    teachers
+  }
+}

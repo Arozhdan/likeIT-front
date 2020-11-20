@@ -1,0 +1,8 @@
+query Prices {
+  prices {
+    id
+    plan
+    amount
+    quantity
+  }
+}
