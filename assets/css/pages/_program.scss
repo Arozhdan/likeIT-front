@@ -3,6 +3,7 @@
   padding-bottom: 50px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   button.btn__header {
     background: transparent;
     border: 2px solid #fff;
@@ -14,9 +15,13 @@
       color: #20b5d2;
     }
   }
-  .header-inner{
+  .header-inner {
     padding-top: 50px;
   }
+}
+
+.header-title-span {
+  padding: 6px 23px;
 }
 
 .plan {
@@ -46,12 +51,23 @@
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: #232323;
+  img {
+    display: inline-block;
+    margin-left: 20px;
+    transition: all 1.3s;
+  }
 
   background: linear-gradient(
     270deg,
     rgba(189, 128, 225, 0) 0%,
     rgba(189, 128, 225, 0.2) 100%
   );
+  &:hover {
+    img {
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
 }
 .plan-table {
   width: 100%;
@@ -90,8 +106,8 @@
   padding: 13px 0;
   &:hover {
     padding: 13px 10px;
-    background-color: rgba(255, 159, 159, 0.041);
-    box-shadow: -10px 10px 15px rgba(255, 180, 180, 0.185);
+    background-color: rgba(159, 233, 255, 0.048);
+    box-shadow: -10px 10px 15px rgba(215, 237, 255, 0.185);
   }
 }
 .program-expect-inner {
@@ -149,7 +165,7 @@
   justify-content: center;
   margin-top: 56px;
   margin-bottom: 75px;
-  .col-md-4 + .col-md-4{
+  .col-md-4 + .col-md-4 {
     margin-left: 5%;
   }
 }
@@ -220,7 +236,6 @@
 }
 .process {
   padding: 180px 0;
-  background-color: #fff;
   margin-bottom: 80px;
 }
 .process-inner {
@@ -237,4 +252,30 @@
 .process-item-text {
   font-size: 20px;
   color: #555555;
+}
+
+.plan-section {
+  transition: all 1.3s;
+}
+.plan-section {
+  transition: all 0.5s;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: scale(0.95);
+}
+.plan-section-wrapper {
+  user-select: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    border-radius: 2px;
+    overflow: hidden;
+  }
+}
+.plan-section.v-collapse-content-end {
+  height: auto;
+  overflow: visible;
+  opacity: 1;
+  transform: unset;
 }

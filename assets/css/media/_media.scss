@@ -1,0 +1,147 @@
+@media (max-width: 1250px) {
+  .nav-link {
+    font-size: 12px;
+  }
+  .btn__nav {
+    font-size: 12px;
+    padding: 2px 21px;
+  }
+  .header-title {
+    font-size: 38px;
+  }
+  .header-subtitle {
+    font-size: 10px;
+  }
+  .header-suptitle {
+    font-size: 18px;
+  }
+  .advantage-text {
+    font-size: 14px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .benefits-item-title {
+    font-size: 20px;
+  }
+  .benefits-item-text {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .price-card {
+    max-width: 300px;
+  }
+  .testimonial-body {
+    font-size: 17px;
+  }
+  .testimonial-author-name {
+    font-size: 17px;
+  }
+  .contact-inner {
+    width: 100%;
+  }
+  .promo-code {
+    font-size: 18px;
+  }
+  .plank-title {
+    font-size: 25px;
+  }
+  .plank-text {
+    font-size: 17px;
+  }
+  .plank-img {
+    width: 20%;
+  }
+  .btn__plank {
+    font-size: 12px;
+  }
+  .section-title {
+    font-size: 32px;
+  }
+  .section-suptitle {
+    font-size: 17px;
+  }
+  .VueCarousel-navigation-prev {
+    left: 42px;
+  }
+  .VueCarousel-navigation-next {
+    right: 42px !important;
+  }
+  .price-card-body-amount {
+    font-size: 35px;
+  }
+  .price-card-body-list-item + .price-card-body-list-item {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 991px) {
+  .nav-wrapper {
+    align-items: center;
+  }
+  .nav-link {
+    font-size: 10px;
+  }
+  .btn__nav {
+    font-size: 10px;
+    padding: 2px 15px;
+  }
+  .header-title {
+    line-height: 38px;
+    font-size: 30px;
+  }
+  .nav {
+    padding: 8px 0;
+  }
+  .header-contacts-text{
+    font-size: 12px;
+  }
+  .btn__header{
+    margin-bottom: 50px;
+  }
+  .header-contacts-links{
+    svg{
+      height: 20px;
+      width: 20px;
+    }
+  }
+  .secondary-title{
+    font-size: 25px;
+  }
+  .services-item{
+    max-width: 345px;
+    padding: 17px;
+  }
+  .services-item-title{
+    font-size: 22px;
+  }
+  .services-item-text{
+    font-size: 17px;
+  }
+  .services-top-category{
+    font-size: 12px;
+  }
+  .plank-text{
+    max-width: 100%;
+  }
+  .teachers-inner{
+    justify-content: space-around;
+  }
+  .teachers-item{
+    max-width: 46%;
+    margin-bottom: 30px;
+  }
+  .teachers-title{
+    font-size: 22px;
+  }
+  .teachers-text{
+    font-size: 17px;
+  }
+  .teachers-img{
+    img{
+      width: 30px;
+    }
+  }
+  .teachers-plank-text{
+    font-size: 17px;
+    line-height: 22px;
+  }
+}

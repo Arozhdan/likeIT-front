@@ -93,23 +93,21 @@
             </p>
           </div>
         </swiper-slide>
-       
       </swiper>
-       <div class="why-slider-nav">
-          <div class="why-pagination">
-            <span></span>
-          </div>
-          <div class="why-arr why-arr__left" >
-              <img src="../assets/img/arr-slider.svg" alt="">
-          </div>
-          <div class=" why-arr why-arr__right">
-              <img src="../assets/img/arr-slider.svg" alt="">
-          </div>
+      <div class="why-slider-nav">
+        <div class="why-pagination">
+          <span></span>
         </div>
-        <div class="btn-wrapper">
-          <button class="btn btn__header">Начать учиться</button>
-
+        <div class="why-arr why-arr__left">
+          <img src="../assets/img/arr-slider.svg" alt="" />
         </div>
+        <div class="why-arr why-arr__right">
+          <img src="../assets/img/arr-slider.svg" alt="" />
+        </div>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn btn__header">Начать учиться</button>
+      </div>
     </div>
   </section>
 </template>

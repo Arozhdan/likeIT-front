@@ -1,0 +1,17 @@
+query Categories {
+  categories {
+    id
+    name
+    img{
+      url
+    }
+    navimage{
+      url
+    }
+    programs{
+      id
+      name
+      slug
+    }
+  }
+}

@@ -11,10 +11,10 @@
           <div class="services-item services-item__1">
             <div class="services-item-top">
               <div class="services-top-left">
-                <img src="../assets/img/design.svg" alt="" />
-                <span class="services-top-category">{{
-                  program.category.name
-                }}</span>
+                <img :src="api_url + program.category.img.url" alt="" />
+                <span class="services-top-category"
+                  >{{ program.category.name }}
+                </span>
               </div>
               <span class="services-top-right"
                 >от {{ program.age.num }} лет</span

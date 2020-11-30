@@ -1,0 +1,11 @@
+query Testimonials {
+  testimonials {
+    id
+    author
+    avatar{
+      url
+    }
+    link
+    text
+  }
+}

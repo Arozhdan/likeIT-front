@@ -5,6 +5,10 @@ query Programs($slug: String!) {
     slug
     name
     description
+    course
+    lessons
+    practices
+    schemes
     age{
       num
     }

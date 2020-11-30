@@ -93,61 +93,53 @@
       <div class="container">
         <div class="plan-inner">
           <h2 class="section-title">программа курса</h2>
-          <div class="plan-section-wrapper">
-            <h3 class="plan-section-title">Графический Дизайн. Базовый</h3>
-            <div class="plan-section">
-              <table class="plan-table">
-                <tbody>
-                  <tr class="plan-row">
-                    <td class="plan-name">Графический Дизайн. Базовый</td>
-                    <td class="plan-home">-</td>
-                    <td class="plan-seminar">1 практика</td>
-                    <td class="plan-lesson">1 урок</td>
-                  </tr>
-                  <tr class="plan-row">
-                    <td class="plan-name">Графический Дизайн. Базовый</td>
-                    <td class="plan-home">2 ДЗ</td>
-                    <td class="plan-seminar">1 практика</td>
-                    <td class="plan-lesson">1 урок</td>
-                  </tr>
-                  <tr class="plan-row">
-                    <td class="plan-name">Графический Дизайн. Базовый</td>
-                    <td class="plan-home">5 ДЗ</td>
-                    <td class="plan-seminar">1 практика</td>
-                    <td class="plan-lesson">1 урок</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          <v-collapse-group
+            class="plan-section-wrapper"
+            v-for="course in programs[0].course"
+            :key="course.id"
+          >
+            <v-collapse-wrapper :active="false">
+              <h3
+                class="plan-section-title"
+                v-collapse-toggle
+              >
+                {{ course.subtitle }}
+                <img src="../../assets/img/program-arr.svg" alt="" />
+              </h3>
+              <div class="plan-section" v-collapse-content>
+                <table class="plan-table">
+                  <tbody>
+                    <tr
+                      class="plan-row"
+                      v-for="item in course.items"
+                      :key="item.id"
+                    >
+                      <td class="plan-name">{{ item.name }}</td>
+                      <template>
+                        <td class="plan-home" v-if="item.hw">
+                          {{ item.hw }} ДЗ
+                        </td>
+                        <td class="plan-home" v-else></td>
+                      </template>
 
-          <div class="plan-section-wrapper">
-            <h3 class="plan-section-title">Графический Дизайн. Продвинутый</h3>
-            <div class="plan-section">
-              <table class="plan-table">
-                <tbody>
-                  <tr class="plan-row">
-                    <td class="plan-name">Графический Дизайн. Базовый</td>
-                    <td class="plan-home">-</td>
-                    <td class="plan-seminar">1 практика</td>
-                    <td class="plan-lesson">1 урок</td>
-                  </tr>
-                  <tr class="plan-row">
-                    <td class="plan-name">Графический Дизайн. Базовый</td>
-                    <td class="plan-home">3 ДЗ</td>
-                    <td class="plan-seminar">2 практика</td>
-                    <td class="plan-lesson">15 урок</td>
-                  </tr>
-                  <tr class="plan-row">
-                    <td class="plan-name">Графический Дизайн. Базовый</td>
-                    <td class="plan-home">2 ДЗ</td>
-                    <td class="plan-seminar">12 практика</td>
-                    <td class="plan-lesson">11 урок</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+                      <template>
+                        <td class="plan-home" v-if="item.practice">
+                          {{ practice(item.practice) }}
+                        </td>
+                        <td class="plan-home" v-else></td>
+                      </template>
+
+                      <template>
+                        <td class="plan-lesson" v-if="item.lessons">
+                          {{ lessons(item.lessons) }}
+                        </td>
+                      </template>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </v-collapse-wrapper>
+          </v-collapse-group>
         </div>
       </div>
     </section>
@@ -160,7 +152,7 @@
               <div class="program-expect-item-img">
                 <img src="../../assets/img/time.svg" alt="" />
               </div>
-              <h4 class="program-expect-item-title">24 уроков</h4>
+              <h4 class="program-expect-item-title">{{lessons(programs[0].lessons)}}</h4>
               <h4 class="program-expect-item-suptitle">
                 Тут нужно что-нибудь классное
               </h4>
@@ -171,7 +163,7 @@
               <div class="program-expect-item-img">
                 <img src="../../assets/img/book.svg" alt="" />
               </div>
-              <h4 class="program-expect-item-title">24 уроков</h4>
+              <h4 class="program-expect-item-title">{{practice(programs[0].practices)}}</h4>
               <h4 class="program-expect-item-suptitle">
                 Тут нужно что-нибудь классное
               </h4>
@@ -183,7 +175,7 @@
               <div class="program-expect-item-img">
                 <img src="../../assets/img/scheme.svg" alt="" />
               </div>
-              <h4 class="program-expect-item-title">24 уроков</h4>
+              <h4 class="program-expect-item-title">{{programs[0].schemes}} схемы</h4>
               <h4 class="program-expect-item-suptitle">
                 Тут нужно что-нибудь классное
               </h4>
@@ -246,7 +238,7 @@
     </section>
     <section class="you-get">
       <div class="you-get-img">
-        <img src="../../assets/img/cookie.png" alt="" />
+        <img src="../../assets/img/programs.png" alt="" />
       </div>
       <div class="container">
         <h2 class="section-title">что вы получаете?</h2>
@@ -414,7 +406,7 @@
     </section>
     <Footer />
   </div>
-  <div class="loader" v-else >
+  <div class="loader" v-else>
     <h1>LOADING THE PAGE</h1>
   </div>
 </template>
@@ -427,7 +419,7 @@ import Nav from "@/components/Nav.vue";
 export default {
   data() {
     return {
-      programs:{},
+      programs: {},
       api_url: process.env.strapiBaseUri,
     };
   },
@@ -438,6 +430,29 @@ export default {
       variables() {
         return { slug: this.$route.params.slug };
       },
+    },
+  },
+  methods: {
+    lessons(num) {
+      if (num[num.length - 1] === "1") {
+        return num + " урок";
+      } else if (+num[num.length - 1] > 1 && +num[num.length - 1] <= 4) {
+        return num + " урока";
+      } else {
+        return num + " уроков";
+      }
+    },
+    practice(amount) {
+      if (amount[amount.length - 1] === "1") {
+        return amount + " практика";
+      } else if (
+        +amount[amount.length - 1] > 1 &&
+        +amount[amount.length - 1] <= 4
+      ) {
+        return amount + " практики";
+      } else {
+        return amount + " практик";
+      }
     },
   },
   components: {

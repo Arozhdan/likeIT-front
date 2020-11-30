@@ -52,7 +52,7 @@
           аналитический склад ума, тврочество и поддерживая интерес.
         </p>
         <div class="benefits-inner row">
-          <div class="benefits-item col-md-4">
+          <div class="benefits-item col-lg-4 col-md-6">
             <div class="benefits-item-left">
               <h3 class="benefits-item-title">Персональный ментор</h3>
               <p class="benefits-item-text">
@@ -63,7 +63,7 @@
               <img src="../assets/img/management.svg" alt="" />
             </div>
           </div>
-          <div class="benefits-item col-md-4">
+          <div class="benefits-item col-lg-4 col-md-6">
             <div class="benefits-item-left">
               <h3 class="benefits-item-title">Персональный ментор</h3>
               <p class="benefits-item-text">
@@ -74,7 +74,7 @@
               <img src="../assets/img/reward.svg" alt="" />
             </div>
           </div>
-          <div class="benefits-item col-md-4">
+          <div class="benefits-item col-lg-4 col-md-6">
             <div class="benefits-item-left">
               <h3 class="benefits-item-title">Персональный ментор</h3>
               <p class="benefits-item-text">
@@ -85,7 +85,7 @@
               <img src="../assets/img/target.svg" alt="" />
             </div>
           </div>
-          <div class="benefits-item col-md-4">
+          <div class="benefits-item col-lg-4 col-md-6">
             <div class="benefits-item-left">
               <h3 class="benefits-item-title">Персональный ментор</h3>
               <p class="benefits-item-text">
@@ -96,7 +96,7 @@
               <img src="../assets/img/stat.svg" alt="" />
             </div>
           </div>
-          <div class="benefits-item col-md-4">
+          <div class="benefits-item col-lg-4 col-md-6">
             <div class="benefits-item-left">
               <h3 class="benefits-item-title">Персональный ментор</h3>
               <p class="benefits-item-text">
@@ -107,7 +107,7 @@
               <img src="../assets/img/rocket.svg" alt="" />
             </div>
           </div>
-          <div class="benefits-item col-md-4">
+          <div class="benefits-item col-lg-4 col-md-6">
             <div class="benefits-item-left">
               <h3 class="benefits-item-title">Персональный ментор</h3>
               <p class="benefits-item-text">
@@ -154,9 +154,9 @@
     <div class="plank">
       <div class="container">
         <div class="row plank-inner">
-          <div class="col-md-9 plnak-content">
+          <div class="col-lg-9 col-md-8 plnak-content">
             <div class="plank-img">
-              <img src="../assets/img/cookie2.svg" alt="" />
+              <img src="../assets/img/consult.png" alt="" />
             </div>
             <div class="plnak-content-text">
               <h2 class="plank-title">
@@ -181,7 +181,7 @@
           Те самые люди, которые позволяют нам быть теми, кем мы являемся!
         </p>
         <div class="teachers-inner row">
-          <div class="teachers-item col-md-4">
+          <div class="teachers-item col-lg-4 col-md-6" >
             <div class="teachers-img">
               <img src="../assets/img/arrow.svg" alt="" />
             </div>
@@ -191,7 +191,7 @@
               ступени отбора такие.
             </p>
           </div>
-          <div class="teachers-item col-md-4">
+          <div class="teachers-item col-md-4 col-md-6">
             <div class="teachers-img">
               <img src="../assets/img/settings.svg" alt="" />
             </div>
@@ -201,7 +201,7 @@
               ступени отбора такие.
             </p>
           </div>
-          <div class="teachers-item col-md-4">
+          <div class="teachers-item col-md-4 col-md-6">
             <div class="teachers-img">
               <img src="../assets/img/finger.svg" alt="" />
             </div>
@@ -216,15 +216,15 @@
       <div class="teachers-plank">
         <div class="container">
           <div class="row teachers-plank-inner">
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-4">
               <h3 class="teachers-plank-title">{{ stats[0].graduates }}+</h3>
               <p class="teachers-plank-text">учеников прошли наши курсы</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-md-4">
               <h3 class="teachers-plank-title">{{ stats[0].programs }}+</h3>
               <p class="teachers-plank-text">различных учебных программ</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-md-4">
               <h3 class="teachers-plank-title">{{ stats[0].teachers }}+</h3>
               <p class="teachers-plank-text">
                 сертифицированных преподавателей
@@ -280,12 +280,12 @@
       </div>
     </section>
     <Faq id="faq" />
-    <div class="promo">
+    <div class="promo" v-if="globals[0].promo">
       <div class="container">
         <div class="row plank-inner">
           <div class="col-md-9 plnak-content">
-            <div class="plank-img">
-              <img src="../assets/img/cookie2.svg" alt="" />
+            <div class="plank-img promo-img">
+              <img src="../assets/img/promo.png" alt="" />
             </div>
             <div class="plnak-content-text">
               <h2 class="plank-title">Промокод на скидку 15% на все курсы</h2>
@@ -296,7 +296,7 @@
             </div>
           </div>
           <div class="btn-wrapper">
-            <div class="btn btn__plank promo-code">Study2020</div>
+            <div class="btn btn__plank promo-code">{{globals[0].promocode}}</div>
           </div>
         </div>
       </div>
@@ -317,11 +317,13 @@ import Form from "@/components/Form.vue";
 import Footer from "@/components/Footer.vue";
 
 import statsQuery from "../apollo/queries/stat/stats.gql";
+import globalQuery from "../apollo/queries/settings/promo.gql";
 
 export default {
   data() {
     return {
       stats: {},
+      globals : {}
     };
   },
   apollo: {
@@ -329,6 +331,10 @@ export default {
       prefetch: true,
       query: statsQuery,
     },
+    globals: {
+      prefetch: true,
+      query: globalQuery,
+    }
   },
   components: {
     Header,

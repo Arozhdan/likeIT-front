@@ -13,7 +13,7 @@
             информационных технологий</span
           >
           <div class="footer-left-contacts">
-            <p>+7 (961) 204 36 09</p>
+            <p>{{links[0].phone}}</p>
             <span>по России бесплатно</span>
 
             <div class="footer-left-contacts-hot">
@@ -24,19 +24,19 @@
             </div>
             <div class="footer-left-contacts-links">
               <div class="footer-left-contacts-links-email">
-                <a href="mailto:info@likeitschool.ru">info@likeitschool.ru</a>
+                <a href="mailto:info@likeitschool.ru">{{links[0].email}}</a>
               </div>
               <div class="footer-left-contacts-links-icons">
-                <a href="#">
+                <a :href="links[0].telegram" target="_blank">
                   <img src="../assets/img/teleg.svg" alt="telegram" />
                 </a>
-                <a href="#">
+                <a :href="links[0].whatsapp" target="_blank">
                   <img src="../assets/img/wp.svg" alt="telegram" />
                 </a>
-                <a href="#">
+                <a :href="links[0].vk" target="_blank">
                   <img src="../assets/img/vk.svg" alt="telegram" />
                 </a>
-                <a href="#">
+                <a :href="links[0].instagram" target="_blank">
                   <img src="../assets/img/inst.svg" alt="telegram" />
                 </a>
               </div>
@@ -47,38 +47,56 @@
         <div class="footer-center col-md-5">
           <span class="footer-center-title">Программы</span>
           <div class="footer-center-items">
-            <div class="footer-center-item">
-              <span class="footer-center-item-title">Программирование</span>
+            <div
+              class="footer-center-item"
+              v-for="category in categories"
+              :key="category.id"
+            >
+              <span class="footer-center-item-title">{{ category.name }}</span>
               <ul class="footer-center-item-list">
-                <li>Разработка сайтов</li>
-                <li>Python</li>
-                <li>Java</li>
-              </ul>
-            </div>
-            <div class="footer-center-item">
-              <span class="footer-center-item-title">Алгоритмы</span>
-              <ul class="footer-center-item-list">
-                <li>Игры на Scratch</li>
-              </ul>
-            </div>
-            <div class="footer-center-item">
-              <span class="footer-center-item-title">Дизайн</span>
-              <ul class="footer-center-item-list">
-                <li>Графический дизайн</li>
-                <li>Вебдизайн</li>
+                <nuxt-link
+                  tag="li"
+                  :to="'/programs/' + program.slug"
+                  v-for="program in category.programs"
+                  :key="program.id"
+                >
+                  {{ program.name }}
+                </nuxt-link>
               </ul>
             </div>
           </div>
         </div>
         <ul class="footer-right col-md-2">
-          <li><a href="">Главная</a></li>
-          <li><a href="">О нас</a></li>
-          <li><a href="">Блог</a></li>
-          <li><a href="">Тарифы</a></li>
-          <li><a href="">Отзывы</a></li>
-          <li><a href="">FAQ</a></li>
+          <li><nuxt-link to="/">Главная </nuxt-link></li>
+          <li><nuxt-link to="/#about">О нас </nuxt-link></li>
+          <li><nuxt-link to="/#pricing">Тарифы </nuxt-link></li>
+          <li><nuxt-link to="/#testimonials">Отзывы </nuxt-link></li>
+          <li><nuxt-link to="/#faq">FAQ </nuxt-link></li>
         </ul>
       </div>
     </div>
   </footer>
 </template>
+<script>
+import categoriesQuery from "../apollo/queries/category/categoriesMenu.gql";
+import linksQuery from "../apollo/queries/link/links.gql";
+
+export default {
+  data() {
+    return {
+      categories: {},
+      links: {},
+    };
+  },
+  apollo: {
+    categories: {
+      prefetch: true,
+      query: categoriesQuery,
+    },
+    links: {
+      prefetch: true,
+      query: linksQuery,
+    },
+  },
+};
+</script>

@@ -6,6 +6,9 @@ query Programs {
     slug
     category{
       name
+      img{
+        url
+      }
     }
     age{
       num

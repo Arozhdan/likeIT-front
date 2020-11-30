@@ -1,8 +1,8 @@
 .nav {
   padding: 22px 0;
-  font-family: 'Circe-Bold' , sans-serif;
+  font-family: "Circe-Bold", sans-serif;
 }
-.nav-links{
+.nav-links {
   align-items: center;
 }
 .nav-link {
@@ -15,13 +15,12 @@
   transition: all 0.2s;
   padding: 10px 0;
   &:hover {
-    color: #F98F6F;
-
+    color: #f98f6f;
   }
-  &::after{
+  &::after {
     position: absolute;
     display: block;
-    content: '';
+    content: "";
     width: 4px;
     height: 1.2px;
     background-color: transparent;
@@ -30,11 +29,87 @@
     transform: translateX(-50%);
     transition: all 0.7s;
   }
-  &:hover::after{
+  &:hover::after {
     background-color: #ffffff;
     width: 100%;
   }
 }
-.logo{
+.logo {
   cursor: pointer;
+}
+
+.nav-links-prg {
+  position: relative;
+  .nav-link {
+    color: #f98f6f;
+
+  }
+  .nav-link img {
+    display: inline-block;
+    transform: translateY(-50%);
+  }
+}
+.nav-prog-menu {
+  position: absolute;
+  width: 34vw;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  padding: 20px 40px;
+  z-index: 15000;
+  background-color: #fff;
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 0;
+  transition: all 0.5s;
+  height: 0;
+  overflow: hidden;
+}
+.nav-links-prg:hover {
+  .nav-link {
+    transition: border-radius 0s;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding: 10px 20px;
+  }
+  .nav-prog-menu {
+    display: flex;
+    opacity: 1;
+    height: auto;
+  }
+}
+.nav-center-item {
+  width: 40%;
+  margin: 16px 0;
+}
+.nav-center-item-title {
+  font-size: 13px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: rgba(68, 68, 68, 0.8);
+  img {
+    margin-right: 5px;
+  }
+  span {
+    display: block;
+  }
+}
+.nav-center-item-list {
+  font-size: 13px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.8);
+  padding-left: 30px;
+  margin-top: 15px;
+}
+.nav-center-item-list li {
+  cursor: pointer;
+  &:hover {
+    color: #f98f6f;
+  }
 }
